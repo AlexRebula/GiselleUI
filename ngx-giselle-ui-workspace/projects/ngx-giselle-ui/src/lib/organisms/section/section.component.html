@@ -1,1 +1,36 @@
-<p>section works!</p>
+<section
+    class="section"
+    [ngClass]="{
+        'is-medium': size === 'medium',
+        'is-large': size === 'large',
+        hero: type === 'hero',
+        'is-primary': color === 'primary',
+        'is-link': color === 'link',
+        'is-success': color === 'success',
+        'is-danger': color === 'danger',
+        'is-info': color === 'info',
+        'is-warning': color === 'warning'
+    }"
+>
+    <div
+        [ngClass]="{
+            'hero-body': type === 'hero',
+            'has-text-centered': hasTextCentered
+        }"
+    >
+        <div class="container">
+            <div class="block">
+                <h1 *ngIf="title" class="title is-1">{{ title }}</h1>
+            </div>
+            <h2 *ngIf="subtitle" class="subtitle">
+                {{ subtitle }}
+            </h2>
+            <div
+                *ngIf="content"
+                class="section__content"
+                [innerHtml]="content"
+            ></div>
+            <ng-content></ng-content>
+        </div>
+    </div>
+</section>
