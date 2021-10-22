@@ -1,1 +1,54 @@
-<p>search-bar works!</p>
+<div
+    class="container is-max-desktop"
+    [ngClass]="{ 'is-floating': config?.isFloating }"
+>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <div class="columns">
+                    <div class="column">
+                        <div class="control">
+                            <input
+                                class="input is-fullwidth"
+                                type="text"
+                                placeholder="Keyword"
+                                [(ngModel)]="keywordValue"
+                                (input)="onKeywordSearch($event)"
+                            />
+                        </div>
+                    </div>
+                    <!-- <div class="column">
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <select>
+                                    <option selected>Partner</option>
+                                    <option>Select dropdown</option>
+                                    <option>With options</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="column">
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <select (change)="onCountrySearch($event)">
+                                    <option value="" selected>
+                                        Select country
+                                    </option>
+                                    <option value="">------------------</option>
+                                    <ng-container
+                                        *ngFor="let option of config?.options"
+                                    >
+                                        <option value="{{ option.value }}">
+                                            {{ option.displayValue }}
+                                        </option></ng-container
+                                    >
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
