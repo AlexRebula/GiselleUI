@@ -1,1 +1,38 @@
-<p>button works!</p>
+<button
+    class="button"
+    [ngClass]="{
+        'is-primary': color === 'primary',
+        'is-white': color === 'white',
+        'is-dark': color === 'dark',
+        'is-black': color === 'black',
+        'is-text': color === 'text',
+        'is-ghost': color === 'ghost',
+        'is-light': isLight === true,
+        'is-small': size === 'small',
+        'is-normal': size === 'normal',
+        'is-medium': size === 'medium',
+        'is-large': size === 'large',
+        'is-fullwidth': isFullWidth === true,
+        'is-outlined': isOutlined === true,
+        'is-inverted': isInverted === true,
+        'is-rounded': isRounded === true,
+        'is-hovered': isHovered === true,
+        'is-focused': isFocused === true,
+        'is-active': isActive === true,
+        'is-loading': isLoading === true
+    }"
+    [attr.disabled]="disabled ? '' : null"
+>
+    <span
+        *ngIf="icon"
+        class="icon"
+        [ngClass]="{
+            'is-small': iconSize === 'small',
+            'is-medium': iconSize === 'medium',
+            'is-large': iconSize === 'large'
+        }"
+    >
+        <!-- <app-icon [icon]="icon"></app-icon> -->
+    </span>
+    <span>{{ text }}</span>
+</button>
