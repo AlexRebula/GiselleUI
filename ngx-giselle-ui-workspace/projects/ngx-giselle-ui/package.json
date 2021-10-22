@@ -4,15 +4,15 @@
     "peerDependencies": {
         "@angular/common": "^12.2.0",
         "@angular/core": "^12.2.0",
+        "bulma": "^0.9.3"
+    },
+    "dependencies": {
+        "tslib": "^2.3.0",
         "@fortawesome/angular-fontawesome": "^0.8.2",
         "@fortawesome/fontawesome-free": "^5.15.4",
         "@fortawesome/fontawesome-svg-core": "^1.2.34",
         "@fortawesome/free-brands-svg-icons": "^5.15.2",
         "@fortawesome/free-regular-svg-icons": "^5.15.2",
-        "@fortawesome/free-solid-svg-icons": "^5.15.2",
-        "bulma": "^0.9.3"
-    },
-    "dependencies": {
-        "tslib": "^2.3.0"
+        "@fortawesome/free-solid-svg-icons": "^5.15.2"
     }
 }
