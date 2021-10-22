@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
     selector: 'gee-menu-link',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./menu-link.component.scss'],
 })
 export class MenuLinkComponent implements OnInit {
+    @Input()
+    isActive: boolean | undefined = false;
+
+    @Input()
+    value: string | undefined;
+
     constructor() {}
 
     ngOnInit(): void {}
