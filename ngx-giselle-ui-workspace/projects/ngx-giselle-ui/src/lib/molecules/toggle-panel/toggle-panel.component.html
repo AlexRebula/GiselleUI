@@ -1,1 +1,24 @@
-<p>toggle-panel works!</p>
+<div class="content is-normal toggle-panel">
+    <div
+        class="toggle-panel__header"
+        [ngClass]="{ 'toggle-panel__header--always-expanded': alwaysExpanded }"
+    >
+        <gee-button
+            class="toggle-panel__toggle-button"
+            [icon]="icon"
+            [color]="toggleButtonColor"
+            (click)="onTogglePanelButtonClick()"
+        ></gee-button>
+        <h2 class="toggle-panel__title">{{ title }}</h2>
+    </div>
+
+    <div
+        class="toggle-panel__body"
+        [ngClass]="{
+            'toggle-panel__body--expanded': isExpanded,
+            'toggle-panel__body--collapsed': !isExpanded
+        }"
+    >
+        <ng-content></ng-content>
+    </div>
+</div>
