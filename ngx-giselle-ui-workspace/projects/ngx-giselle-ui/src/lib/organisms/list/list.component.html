@@ -1,1 +1,43 @@
-<p>list works!</p>
+<gee-section
+    [size]="config?.section?.size"
+    [type]="config?.section?.type"
+    [color]="config?.section?.color"
+    [title]="config?.section?.title"
+    [subtitle]="config?.section?.subtitle"
+    [content]="config?.section?.content"
+    [hasTextCentered]="config?.section?.hasTextCentered"
+    [ngClass]="{ 'is-carousel': config?.mode === 'carousel' }"
+>
+    <div class="carousel-controls-container">
+        <div class="carousel-controls">
+            <gee-button
+                class="
+                    carousel-controls__button carousel-controls__button--left
+                "
+                [icon]="iconLeft"
+                [color]="carouselControlButtonColor"
+                (click)="onCarouselNavigationButtonClick('left')"
+            ></gee-button>
+            <gee-button
+                class="
+                    carousel-controls__button carousel-controls__button--right
+                "
+                [icon]="iconRight"
+                [color]="carouselControlButtonColor"
+                (click)="onCarouselNavigationButtonClick('right')"
+            ></gee-button>
+        </div>
+
+        <div
+            class="list__items"
+            *ngIf="config?.items?.length"
+            [attr.style]="carouselStyles"
+        >
+            <div class="block list__item" *ngFor="let item of config?.items">
+                <gee-card [config]="item">
+                    {{ item?.card?.body }}
+                </gee-card>
+            </div>
+        </div>
+    </div>
+</gee-section>
