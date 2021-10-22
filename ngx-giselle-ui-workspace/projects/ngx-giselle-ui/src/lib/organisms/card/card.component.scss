@@ -1,0 +1,21 @@
+:host-context {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    p {
+        &.title {
+            overflow: hidden;
+        }
+    }
+
+    .card {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+    }
+
+    :hover {
+        background-color: #00d1b2;
+    }
+}

@@ -1,0 +1,104 @@
+:host-context {
+    display: inline-block;
+    width: 100%;
+
+    .list {
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+
+            transition: margin 700ms;
+        }
+
+        &__item {
+            margin: 10px;
+            width: 100%;
+        }
+    }
+    .is-carousel {
+        position: relative;
+        background-color: whitesmoke;
+        min-height: 644px;
+        .list {
+            &__items {
+                flex-wrap: unset;
+            }
+
+            &__item {
+                flex: 1 0 47%;
+                max-width: 400px;
+            }
+        }
+
+        ::ng-deep {
+            section {
+                padding: 100px 0;
+                width: 100%;
+                .hero-body {
+                    padding: 0;
+                    width: 100%;
+                    .container {
+                        padding: 0;
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+        .carousel-controls-container {
+            position: relative;
+        }
+        &:hover {
+            .carousel-controls {
+                display: flex;
+            }
+        }
+
+        .carousel-controls {
+            height: 0px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+            display: none;
+            padding: 0 20px;
+            &__button {
+                margin-top: -20px;
+                &--left {
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .list {
+            &__item {
+                flex: 1 0 47%;
+                max-width: 46%;
+            }
+        }
+    }
+
+    @media (min-width: 960px) {
+        .list {
+            &__item {
+                flex: 1 0 30%;
+                max-width: 31%;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .list {
+            &__item {
+                flex: 1 0 21%;
+                max-width: 24%;
+            }
+        }
+    }
+}

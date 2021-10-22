@@ -1,0 +1,16 @@
+:host-context {
+    display: inline-block;
+
+    /* override for some odd bulma behaviour when we customize components */
+    .button {
+        padding-left: 5px;
+        padding-right: 5px;
+        .icon {
+            &:first-child {
+                &:not(:last-child) {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+}

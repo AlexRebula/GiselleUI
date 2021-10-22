@@ -1,0 +1,11 @@
+:host-context {
+    @media (min-width: 920px) {
+        app-form-field {
+            max-width: 60%;
+
+            &.is-readonly {
+                max-width: 100%;
+            }
+        }
+    }
+}

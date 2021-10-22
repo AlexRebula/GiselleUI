@@ -1,0 +1,122 @@
+:host-context {
+    .matrix {
+        &__header {
+        }
+        &__cell {
+            // font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 14px;
+            height: 90px;
+            .matrix__cell-wrapper {
+                display: none;
+            }
+            &.is-yes {
+                color: hsl(171, 100%, 29%);
+            }
+
+            &.is-no {
+                color: hsl(348, 100%, 61%);
+            }
+
+            &[data-activity='organisation'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+        &__row {
+            min-height: 90px;
+        }
+        &__organisation-name-cell {
+            color: hsl(0, 0%, 21%);
+            font-weight: bold;
+        }
+    }
+    .show {
+        &__status {
+            [data-activity='status'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+        &__funding-model {
+            [data-activity='funding-model'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+        &__advocacypolicy {
+            [data-activity='advocacypolicy'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+        &__audience {
+            [data-activity='audience'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+        &__mental-health-conditions {
+            [data-activity='mental-health-conditions'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+        &__psychosocial-hazards {
+            [data-activity='psychosocial-hazards'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+        &__regulation {
+            [data-activity='regulation'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+        &__workplace-strategies-tools {
+            [data-activity='workplace-strategies-tools'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+        &__supporting-recovery {
+            [data-activity='supporting-recovery'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+        &__training {
+            [data-activity='training'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+        &__manager-training {
+            [data-activity='manager-training'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+        &__all-workers-training {
+            [data-activity='all-workers-training'] {
+                .matrix__cell-wrapper {
+                    display: block !important;
+                }
+            }
+        }
+    }
+}

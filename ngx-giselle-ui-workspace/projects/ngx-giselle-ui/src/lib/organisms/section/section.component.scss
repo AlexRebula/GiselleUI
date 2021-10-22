@@ -1,0 +1,16 @@
+:host-context {
+    display: inline-block;
+    width: 100%;
+
+    @media (min-width: 1200px) {
+        .subtitle {
+            // max-width: 55%;
+        }
+
+        .section {
+            &__content {
+                // max-width: 65%;
+            }
+        }
+    }
+}

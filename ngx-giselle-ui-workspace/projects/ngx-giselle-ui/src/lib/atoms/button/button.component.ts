@@ -9,7 +9,7 @@ import {
 @Component({
     selector: 'gee-button',
     templateUrl: './button.component.html',
-    styleUrls: ['./button.component.css'],
+    styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent implements OnInit {
     @Input()

@@ -1,0 +1,11 @@
+:host-context {
+    .navbar-item {
+        img {
+            max-height: 35px;
+
+            &.brand-logo {
+                width: 185px;
+            }
+        }
+    }
+}
