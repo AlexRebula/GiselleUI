@@ -1,1 +1,14 @@
-<p>form works!</p>
+<ng-container *ngFor="let section of formSections">
+    <gee-toggle-panel [title]="section.title" [alwaysExpanded]="alwaysExpanded">
+        <ng-container *ngFor="let field of section.fields">
+            <gee-form-field
+                [id]="field.id"
+                [type]="field.type"
+                [label]="field.label"
+                [readOnly]="field.readOnly"
+                [options]="field.options"
+                [(value)]="field.value"
+            ></gee-form-field>
+        </ng-container>
+    </gee-toggle-panel>
+</ng-container>

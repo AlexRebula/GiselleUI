@@ -1,4 +1,4 @@
-import { IFormFieldTypeEnum } from 'src/app/components/molecules/form-field/_interfaces/form-field.interface';
+import { IFormFieldTypeEnum } from '../../../molecules/form-field/_interfaces/form-field.interface';
 
 export interface IFormSection {
     title: string;
