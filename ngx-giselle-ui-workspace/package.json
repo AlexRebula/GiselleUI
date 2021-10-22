@@ -6,7 +6,9 @@
         "start": "ng serve",
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
-        "test": "ng test"
+        "test": "ng test",
+        "build:ngx-giselle-ui": "ng build ngx-giselle-ui",
+        "build-watch:ngx-giselle-ui": "ng build ngx-giselle-ui --watch"
     },
     "private": true,
     "dependencies": {
