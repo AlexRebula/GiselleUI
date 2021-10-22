@@ -1,1 +1,102 @@
-<p>matrix works!</p>
+<table
+    class="table matrix is-striped is-narrow"
+    [ngClass]="showActivityClassArray"
+>
+    <thead>
+        <tr class="matrix__header">
+            <th
+                *ngFor="
+                    let header of getArrayFromCommaSeparatedString(
+                        matrixHeaders
+                    );
+                    let indexOfelement = index
+                "
+                [attr.data-activity]="getActivityCSSName(indexOfelement)"
+                class="matrix__cell"
+            >
+                <div class="matrix__cell-wrapper">
+                    <button
+                        *ngIf="
+                            indexOfelement === 0 &&
+                            showActivityClassArray.length !=
+                                defaultColumns.length
+                        "
+                        class="button is-success is-small"
+                        (click)="onShowAllColumnButtonClick()"
+                    >
+                        Reset
+                    </button>
+
+                    <button
+                        *ngIf="indexOfelement > 0"
+                        class="button is-small is-light"
+                        (click)="onHideColumnButtonClick(indexOfelement)"
+                    >
+                        Hide
+                    </button>
+                </div>
+            </th>
+        </tr>
+        <tr class="matrix__header">
+            <th
+                *ngFor="
+                    let header of getArrayFromCommaSeparatedString(
+                        matrixHeaders
+                    );
+                    let indexOfelement = index
+                "
+                [attr.data-activity]="getActivityCSSName(indexOfelement)"
+                class="matrix__cell"
+            >
+                <div class="matrix__cell-wrapper">
+                    {{ header }}
+                </div>
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let organisation of items" class="matrix__row">
+            <td class="matrix__cell matrix__organisation-name-cell">
+                {{ organisation.name }}
+            </td>
+            <td
+                class="matrix__cell"
+                [ngClass]="{
+                    'is-yes': activity.toLowerCase() === 'y',
+                    'is-no': activity.toLowerCase() === 'n'
+                }"
+                *ngFor="
+                    let activity of getArrayFromCommaSeparatedString(
+                        organisation.activities
+                    );
+                    let indexOfelement = index
+                "
+                [attr.data-activity]="getActivityCSSName(indexOfelement + 1)"
+            >
+                <div class="matrix__cell-wrapper">
+                    <ng-container *ngIf="activity">
+                        <ng-container *ngIf="activity === 'Y'">
+                            <gee-icon
+                                [icon]="getActivityIcon(activity)"
+                            ></gee-icon>
+                        </ng-container>
+
+                        <ng-container
+                            *ngIf="
+                                !(
+                                    activity === 'Y' ||
+                                    activity === 'N' ||
+                                    activity.toLowerCase() === 'n/a'
+                                )
+                            "
+                        >
+                            {{ activity }}
+                        </ng-container>
+                    </ng-container>
+                    <ng-container *ngIf="!activity"></ng-container>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
