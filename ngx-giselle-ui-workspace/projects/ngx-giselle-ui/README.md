@@ -1,4 +1,20 @@
-# NgxGiselleUi
+# Ngx Giselle UI 
+
+IMPORTANT NOTICE: We just started this account and are working hard in these days to pull in all the components available in this package, so at the moment, this library is not yet ready to use. We will update this documentation as soon as we achieve in adding all necessary components that we are planning to for the first stage. What you will get from this package now is just a set of empty placeholder components which we are trying hard to populate. If you'd like to help and speed this up and contribute, please head to the Github account: https://github.com/AlexRebula/GiselleUI
+
+# What is this package for 
+
+This is a library of UI components much like Angular Material would do. The default CSS framework used here is Bulma. What makes this library unique is that the collection of components does not siply stop at basic UI components such as dropdowns, sections etc.. This Framework brings together the power of simple UI components done using the atomic design priciple and some powerful template components for crud operations such as the Record Manager, Record Manager Wizard, AG Grid wrapper, comparison Matrix component and more.
+
+The ultimate aim for this framework is to offer a free alternative to expensive professional UI frameworks on the market.
+
+# How to install in the consuming project
+
+1. Run 'npm i @alexrebula/nxg-giselle-ui'
+2. Install all peer dependencies suggested in the console
+3. In angular.json file of your consuming project make sure you have added styles for bulma: '"styles": ["node_modules/bulma/css/bulma.css"],'
+
+# For developers
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
