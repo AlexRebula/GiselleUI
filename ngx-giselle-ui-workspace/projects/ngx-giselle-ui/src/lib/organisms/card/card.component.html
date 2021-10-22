@@ -1,1 +1,25 @@
-<p>card works!</p>
+<div class="card" [routerLink]="['/organisation/' + config?.id]">
+    <div class="card-content has-text-left">
+        <div class="media">
+            <div class="media-left">
+                <gee-icon [icon]="config?.card?.icon"></gee-icon>
+            </div>
+            <div class="media-content">
+                <p class="title is-4" routerLinkActive="router-link-active">
+                    {{ config?.card?.title }}
+                </p>
+            </div>
+        </div>
+
+        <div class="content">
+            <ng-content></ng-content>
+        </div>
+    </div>
+    <!-- <footer class="card-footer">
+      <a
+          [routerLink]="['/organisation/' + config?.id]"
+          class="card-footer-item"
+          >View</a
+      >
+  </footer> -->
+</div>
