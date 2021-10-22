@@ -1,1 +1,60 @@
-<p>form-field works!</p>
+<div class="field form-field form-field__read-only" *ngIf="readOnly">
+    <label class="label" *ngIf="label">{{ label }}</label>
+    <div class="content is-normal">
+        <ng-container *ngIf="value">
+            {{ value }}
+        </ng-container>
+        <ng-container *ngIf="!value"> - </ng-container>
+    </div>
+</div>
+
+<div
+    class="field form-field form-field__text"
+    *ngIf="!readOnly && type === 'text'"
+>
+    <label class="label" *ngIf="label">{{ label }}</label>
+    <div class="control">
+        <input
+            [attr.id]="id"
+            class="input is-primary"
+            type="text"
+            placeholder="Primary input"
+            [(ngModel)]="value"
+        />
+    </div>
+</div>
+
+<div
+    class="field form-field form-field__textarea"
+    *ngIf="!readOnly && type === 'textarea'"
+>
+    <label class="label" *ngIf="label">{{ label }}</label>
+    <div class="control">
+        <textarea
+            [attr.id]="id"
+            class="textarea is-primary"
+            placeholder="Textarea"
+            rows="10"
+            [(ngModel)]="value"
+        ></textarea>
+    </div>
+</div>
+
+<div
+    class="field form-field form-field__select"
+    *ngIf="!readOnly && type === 'select'"
+>
+    <label class="label" *ngIf="label">{{ label }}</label>
+    <div class="select is-multiple">
+        <select [attr.id]="id" [(ngModel)]="value" multiple size="8">
+            <ng-container *ngFor="let option of options">
+                <option
+                    [ngValue]="option"
+                    [attr.selected]="optionSelected(option)"
+                >
+                    {{ option }}
+                </option>
+            </ng-container>
+        </select>
+    </div>
+</div>
