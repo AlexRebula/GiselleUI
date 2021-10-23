@@ -1,1 +1,10 @@
-<p>menu-template works!</p>
+<aside class="menu">
+    <ng-content></ng-content>
+
+    <gee-menu-list-template
+        *ngFor="let list of lists"
+        [label]="list.label"
+        [items]="list.items"
+    >
+    </gee-menu-list-template>
+</aside>

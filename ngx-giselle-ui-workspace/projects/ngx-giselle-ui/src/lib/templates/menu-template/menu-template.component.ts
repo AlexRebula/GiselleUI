@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
     selector: 'gee-menu-template',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./menu-template.component.scss'],
 })
 export class MenuTemplateComponent implements OnInit {
+    @Input()
+    lists: any[] | undefined;
+
     constructor() {}
 
     ngOnInit(): void {}
