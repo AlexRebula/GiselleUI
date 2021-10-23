@@ -1,1 +1,19 @@
-<p>menu-list-template works!</p>
+<p [ngClass]="{ 'menu-label': label }">{{ label }}</p>
+<ul [ngClass]="{ 'menu-list': label }">
+    <li *ngFor="let item of items">
+        <gee-menu-link [isActive]="item.isActive">
+            {{ item.text }}
+        </gee-menu-link>
+        <ng-container
+            *ngIf="item.list && item.list.items && item.list.items.length"
+        >
+            <ul>
+                <li *ngFor="let secondLevelItem of item.list.items">
+                    <gee-menu-link [isActive]="secondLevelItem.isActive">
+                        {{ secondLevelItem.text }}
+                    </gee-menu-link>
+                </li>
+            </ul>
+        </ng-container>
+    </li>
+</ul>
