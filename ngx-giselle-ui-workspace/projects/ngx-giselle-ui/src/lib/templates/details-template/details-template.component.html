@@ -1,1 +1,32 @@
-<p>details-template works!</p>
+<ng-container *ngIf="config?.heroBanner">
+    <gee-section
+        [size]="config?.heroBanner?.size"
+        [type]="config?.heroBanner?.type"
+        [color]="config?.heroBanner?.color"
+        [title]="config?.heroBanner?.title"
+        [subtitle]="config?.heroBanner?.subtitle"
+        [content]="config?.heroBanner?.content"
+    >
+    </gee-section>
+</ng-container>
+
+<gee-section>
+    <div class="columns">
+        <div class="column is-two-thirds">
+            <gee-form
+                [formSections]="config?.formSections"
+                [alwaysExpanded]="config?.alwaysExpanded"
+            ></gee-form>
+        </div>
+        <div class="column">
+            <gee-menu-template [lists]="config?.menuLists"></gee-menu-template>
+        </div>
+    </div>
+</gee-section>
+<gee-section>
+    <gee-matrix
+        [matrixHeaders]="config?.overviewMatrix?.matrixHeaders"
+        [defaultColumns]="config?.overviewMatrix?.defaultColumns"
+        [items]="config?.overviewMatrix?.items"
+    ></gee-matrix>
+</gee-section>
