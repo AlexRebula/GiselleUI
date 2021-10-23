@@ -6,7 +6,7 @@
 
 Giselle UI is a library of UI components, much like Angular Material. It is still in early life-cycle stages and it cannot yet compare with Angular Material, but the long-term goal is to make yet another alternative with Bulma CSS. 
 
-The vision of this library is to create such a library where the collection of components will not simply stop at basic UI components like dropdowns, sections etc... you know, the basic stuff. This Framework's aim is going to be bringing together the power of simple UI components using Bulma while all being done using the atomic design priciple and some powerful template components for CRUD operations such as the Record Manager, Record Manager Wizard, AG Grid wrapper, Matrix and more.
+The vision of this library is to create such a library where the collection of components will not simply stop at basic UI components like dropdowns, sections etc... you know, the basic stuff. This Framework's aim is going to be bringing together the power of simple UI components using Bulma while all being done using the atomic design principle and some powerful template components for CRUD operations such as the Record Manager, Record Manager Wizard, AG Grid wrapper, Matrix and more.
 
 iN other words the ultimate long-term aim for this framework is to offer a free, oen source alternative to expensive professional UI frameworks currently on the market.
 
