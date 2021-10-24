@@ -1,0 +1,41 @@
+@import '../../_styles/vars.scss';
+:host-context {
+    @media (min-width: $breakpoint__desktop-l) {
+        &.col-1 {
+            max-width: calc(100% * (1 / 12));
+        }
+        &.col-2 {
+            max-width: calc(100% * (2 / 12));
+        }
+        &.col-3 {
+            max-width: calc(100% * (3 / 12));
+        }
+        &.col-4 {
+            max-width: calc(100% * (4 / 12));
+        }
+        &.col-5 {
+            max-width: calc(100% * (5 / 12));
+        }
+        &.col-6 {
+            max-width: calc(100% * (6 / 12));
+        }
+        &.col-7 {
+            max-width: calc(100% * (7 / 12));
+        }
+        &.col-8 {
+            max-width: calc(100% * (8 / 12));
+        }
+        &.col-9 {
+            max-width: calc(100% * (9 / 12));
+        }
+        &.col-10 {
+            max-width: calc(100% * (10 / 12));
+        }
+        &.col-11 {
+            max-width: calc(100% * (11 / 12));
+        }
+        &.col-12 {
+            max-width: calc(100% * (12 / 12));
+        }
+    }
+}

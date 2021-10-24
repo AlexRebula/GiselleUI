@@ -1,0 +1,49 @@
+@import '../../_styles/vars.scss';
+
+@media (min-width: $breakpoint__desktop-l) {
+    :host-context {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        flex-wrap: wrap;
+
+        ::ng-deep {
+            gee-section {
+                flex: 1 1 0;
+
+                margin-left: 10px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            form {
+                gee-section {
+                    margin-left: 0;
+                }
+            }
+
+            .card {
+                flex: 1 0 21%;
+                margin-left: 10px;
+                &:first-child,
+                &:nth-child(5n) {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        ::ng-deep {
+            gee-flex-column {
+                flex: 1 1 0;
+
+                margin-left: 10px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
